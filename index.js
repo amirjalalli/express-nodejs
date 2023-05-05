@@ -102,7 +102,10 @@ const users = require("./users");
 const app = express();
 
 app.get("/api/users", (req, res) => {
-  res.json(users);
+  res.json({
+    data: users,
+    message: "ok",
+  });
 });
 
 const port = process.env.PORT || 3000;
